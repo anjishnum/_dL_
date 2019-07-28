@@ -29,3 +29,9 @@ model.compile(optimizer='adam', loss='sparse_categorical_crossentropy', metrics 
 model.fit(training_images, training_labels, epochs=5, callbacks=[callbacks])
 
 model.evaluate(test_images, test_labels)
+
+classifications = model.predict(test_images)
+c0 = list(classifications[0])
+
+print(c0.index(max(c0)))
+print(test_labels[0])
