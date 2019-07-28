@@ -7,3 +7,8 @@ class myCallback(tf.keras.callbacks.Callback):
       print("\nReached 90% accuracy so cancelling training!")
       self.model.stop_training = True
 
+callbacks = myCallback()
+mnist = tf.keras.datasets.fashion_mnist
+(training_images, training_labels), (test_images, test_labels) = mnist.load_data()
+training_images=training_images/255.0
+test_images=test_images/255.0
