@@ -1,3 +1,4 @@
+''' Train time = 36sec - 5epochs | Train accuracy = 0.9369 | Train loss = 0.1638 | Test accuracy = 0.9125 | Test loss = 0.2468'''
 import tensorflow as tf
 #import keras
 
