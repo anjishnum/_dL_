@@ -11,7 +11,6 @@ class myCallbacks(keras.callbacks.Callback):
 callbacks = myCallbacks()
 
 mnist = keras.datasets.mnist
-
 (x_train, y_train), (x_test, y_test) = mnist.load_data()
 
 x_train = x_train/255.0
@@ -32,3 +31,11 @@ model.compile(optimizer='adam', loss='sparse_categorical_crossentropy', metrics=
 model.fit(x_train, y_train, epochs=5, callbacks=[callbacks])
 
 model.evaluate(x_test, y_test)
+
+classifications = model.predict(x_test)
+c0 = classifications[0]
+c0 = list(c0)
+print(c0.index(max(c0)))
+print(y_test[0])
+plt.imshow(x_test[0])
+plt.show()
