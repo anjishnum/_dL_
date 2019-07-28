@@ -1,6 +1,7 @@
+''' Train time = 28sec - 5epochs | Train accuracy = 0.8958 | Train loss = 0.2800 | Test accuracy = 0.8772 | Test loss = 0.3382'''
 import tensorflow as tf
-import keras
-import matplotlib.pyplot as plt
+#import keras
+#import matplotlib.pyplot as plt
 #print(tf.__version__)
 
 class myCallback(tf.keras.callbacks.Callback):
