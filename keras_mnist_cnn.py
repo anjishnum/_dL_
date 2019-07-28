@@ -18,7 +18,13 @@ x_train = x_train/255.0
 x_test = x_test/255.0
 
 model = keras.models.Sequential([
-  keras.layers.Conv2D(64, (3,3), activation='relu', input_shape=(28,28,1))
-
-
+  keras.layers.Conv2D(64, (3,3), activation='relu', input_shape=(28,28,1)),
+  keras.layers.MaxPooling2D(2,2),
+  keras.layers.Conv2D(64, (3,3), activation='relu'),
+  keras.layers.MaxPooling2D(2,2),
+  keras.layers.Flatten(),
+  keras.layers.Dense(512, activation='relu'),
+  keras.layers.Dense(10, activation='softmax')
 ])
+
+
