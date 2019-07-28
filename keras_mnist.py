@@ -16,7 +16,6 @@ mnist = tf.keras.datasets.fashion_mnist
 plt.imshow(training_images[100])
 plt.show()
 
-
 training_images=training_images/255.0
 test_images=test_images/255.0
 
