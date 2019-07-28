@@ -1,6 +1,5 @@
 import tensorflow as tf
 #import keras
-import matplotlib.pyplot as plt
 
 class myCallback(tf.keras.callbacks.Callback):
   def on_epoch_end(self,epoch,logs={}):
@@ -33,11 +32,3 @@ model.compile(optimizer='adam', loss='sparse_categorical_crossentropy', metrics=
 model.fit(x_train, y_train, epochs=5, callbacks=[callbacks])
 
 model.evaluate(x_test, y_test)
-
-classifications = model.predict(x_test)
-c0 = classifications[0]
-c0 = list(c0)
-print(c0.index(max(c0)))
-print(y_test[0])
-plt.imshow(x_test[0])
-plt.show()
