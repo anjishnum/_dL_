@@ -78,7 +78,7 @@ for x in range(1,size_x-1):
         convolution=255
       i_transformed_3[x, y] = convolution       
       
-a = []
+'''a = []
 for x in range(1,size_x-1):
   for y in range(1,size_y-1):
       convolution = 0.0
@@ -98,3 +98,8 @@ for x in range(1,size_x-1):
       if(convolution>255):
         convolution=255
       #i_transformed_1[x, y] = convolution
+print(min(a))
+print(max(a))
+print(a.index(max(a)))
+print(a.index(min(a)))'''
+      
