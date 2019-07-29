@@ -114,3 +114,15 @@ for x in range(0, size_x, 2):
     pixels.append(i_transformed_1[x, y+1])
     pixels.append(i_transformed_1[x+1, y+1])
     newImage_1[int(x/2),int(y/2)] = max(pixels)
+
+new_x = int(size_x/2)
+new_y = int(size_y/2)
+newImage_2 = np.zeros((new_x, new_y))
+for x in range(0, size_x, 2):
+  for y in range(0, size_y, 2):
+    pixels = []
+    pixels.append(i_transformed_2[x, y])
+    pixels.append(i_transformed_2[x+1, y])
+    pixels.append(i_transformed_2[x, y+1])
+    pixels.append(i_transformed_2[x+1, y+1])
+    newImage_2[int(x/2),int(y/2)] = max(pixels)    
