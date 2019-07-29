@@ -78,4 +78,23 @@ for x in range(1,size_x-1):
         convolution=255
       i_transformed_3[x, y] = convolution       
       
-      
+a = []
+for x in range(1,size_x-1):
+  for y in range(1,size_y-1):
+      convolution = 0.0
+      convolution = convolution + (i[x - 1, y-1] * filter1[0][0])
+      convolution = convolution + (i[x, y-1] * filter1[0][1])
+      convolution = convolution + (i[x + 1, y-1] * filter1[0][2])
+      convolution = convolution + (i[x-1, y] * filter1[1][0])
+      convolution = convolution + (i[x, y] * filter1[1][1])
+      convolution = convolution + (i[x+1, y] * filter1[1][2])
+      convolution = convolution + (i[x-1, y+1] * filter1[2][0])
+      convolution = convolution + (i[x, y+1] * filter1[2][1])
+      convolution = convolution + (i[x+1, y+1] * filter1[2][2])
+      convolution = convolution * weight
+      a.append(convolution)
+      if(convolution<0):
+        convolution=0
+      if(convolution>255):
+        convolution=255
+      #i_transformed_1[x, y] = convolution
