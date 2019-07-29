@@ -138,3 +138,13 @@ for x in range(0, size_x, 2):
     pixels.append(i_transformed_3[x, y+1])
     pixels.append(i_transformed_3[x+1, y+1])
     newImage_3[int(x/2),int(y/2)] = max(pixels)    
+    
+img = [i, i_transformed_1, newImage_1, i, i_transformed_2, newImage_2, i, i_transformed_3, newImage_3]
+fig = plt.figure(figsize=(12,12))
+for j in range(0,9): 
+  fig.add_subplot(3,3,j+1)
+  plt.imshow(img[j])
+plt.show()
+print(filter1)
+print(filter2)
+print(filter3)    
