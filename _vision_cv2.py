@@ -8,7 +8,7 @@ plt.grid(False)
 plt.gray()
 plt.axis('off')
 plt.imshow(i)
-#plt.show()
+plt.show()
 
 i_transformed_1 = np.copy(i)
 i_transformed_2 = np.copy(i)
