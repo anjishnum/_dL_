@@ -1,4 +1,4 @@
-''' Image convolution and compression '''
+''' Image convolution and compression for feature extraction and blurring effect'''
 
 import cv2
 import numpy as np
