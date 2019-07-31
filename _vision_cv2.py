@@ -5,7 +5,7 @@ i = misc.ascent()
 
 import matplotlib.pyplot as plt
 plt.grid(False)
-#plt.gray()
+plt.gray()
 #plt.axis('off')
 #plt.imshow(i)
 #plt.show()
