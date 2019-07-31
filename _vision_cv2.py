@@ -7,7 +7,7 @@ import matplotlib.pyplot as plt
 plt.grid(False)
 plt.gray()
 plt.axis('off')
-#plt.imshow(i)
+plt.imshow(i)
 #plt.show()
 
 i_transformed_1 = np.copy(i)
